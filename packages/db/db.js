@@ -1,10 +1,17 @@
 const low = require('lowdb');
 const FileSync = require('lowdb/adapters/FileSync');
 
-const adapter = new FileSync('db.json');
-const db = low(adapter);
+const adapterAdventure = new FileSync('db.json');
+const dbAdventure = low(adapterAdventure);
 
-db.defaults({ adventures: [] })
+const adapterShowplace = new FileSync('db2.json');
+const dbShowplace = low(adapterShowplace);
+
+dbAdventure.defaults({ adventures: [] })
   .write();
 
-module.exports = db;
+dbShowplace.defaults({ showplaces: [] })
+  .write();
+
+module.exports = dbAdventure;
+module.exports = dbShowplace;

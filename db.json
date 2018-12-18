@@ -1,16 +1,44 @@
 {
   "adventures": [
     {
-      "id": "1",
-      "name": "Tbilisi",
-      "dateFrom": "2019-03-01",
-      "dateTo": "2019-03-01"
+      "id": "1e33b7bd93b2b",
+      "name": "SecondTrip",
+      "country": "USA",
+      "city": "New York",
+      "dateFrom": "2019-05-20",
+      "dateTo": "2019-05-30",
+      "timeFrom": "10:00",
+      "timeTo": "10:00"
     },
     {
-      "id": "2",
-      "name": "Berlin",
-      "dateFrom": "2019-03-10",
-      "dateTo": "2019-03-15"
+      "id": "3e0103e019af7",
+      "name": "berlin",
+      "dateFrom": "222",
+      "dateTo": "445"
+    },
+    {
+      "id": "a93547234443a",
+      "name": "Madrid",
+      "dateFrom": "2019-05-20",
+      "dateTo": "2019-05-30"
+    },
+    {
+      "id": "a1beb74f31ad",
+      "name": "Moscow",
+      "dateFrom": "2019-03-01",
+      "dateTo": "2019-03-13"
+    },
+    {
+      "id": "f33ad05fead4c",
+      "name": "Madrid",
+      "dateFrom": "2019-06-01",
+      "dateTo": "2019-06-14"
+    },
+    {
+      "id": "663a275e00cfc",
+      "name": "minsk",
+      "dateFrom": "2019",
+      "dateTo": "2019"
     }
   ]
 }

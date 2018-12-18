@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const db = require('../db/db');
+const dbAdventure = require('../db/db');
 const { validate } = require('jsonschema');
 
 const newTask = text => ({
@@ -7,8 +7,12 @@ const newTask = text => ({
     .toString(16)
     .split('.')[1]),
   name: text.name,
+  country: text.country,
+  city: text.city,
   dateFrom: text.dateFrom,
-  dateTo: text.dateTo
+  dateTo: text.dateTo,
+  timeFrom: text.timeFrom,
+  timeTo: text.timeFrom
 }); 
 
 // router.use('/:id', (req, res, next) => {
@@ -23,14 +27,14 @@ const newTask = text => ({
 
 // GET /adventures
 router.get('/', (req, res) => {
-  const adventures = db.get('adventures').value();
+  const adventures = dbAdventure.get('adventures').value();
 
   res.json({ status: 'OK', data: adventures });
 });
 
 // GET /adventures/:id
 router.get('/:id', (req, res) => {
-  const adventure = db
+  const adventure = dbAdventure
     .get('adventures')
     .find({ id: req.params.id })
     .value();
@@ -56,9 +60,9 @@ router.post('/', (req, res, next) => {
 
 console.log(adventure);
 
-  db
+  dbAdventure
     .get('adventures')
-    .push(adventure)
+    .unshift(adventure)
     .write();
 
   res.json({ status: 'OK', data: adventure });
@@ -81,20 +85,20 @@ router.patch('/:id', (req, res, next) => {
   //   next(new Error('INVALID_API_FORMAT'));
   // }
 
-  const adventure = db
+  const adventure = dbAdventure
     .get('adventures')
     .find({ id: req.params.id })
     .assign(req.body)
     .value();
 
-  db.write();
+  dbAdventure.write();
 
   res.json({ status: 'OK', data: adventure });
 });
 
 // DELETE /adventures/:id
 router.delete('/:id', (req, res) => {
-  db
+  dbAdventure
     .get('adventures')
     .remove({ id: req.params.id })
     .write();
