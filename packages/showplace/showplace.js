@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const dbShowplace = require('../db/db');
+const dbShowplace = require('../db/db2');
 const { validate } = require('jsonschema');
 
 const newShowplace = text => ({
