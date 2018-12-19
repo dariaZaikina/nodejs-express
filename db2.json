@@ -5,6 +5,18 @@
       "name": "statue of Liberty",
       "location": "Нью-Йорк, 10004, США",
       "adventureId": "1e33b7bd93b2b"
+    },
+    {
+      "id": "1e33b7bd9333",
+      "name": "statue of",
+      "location": "Нью-Йорк, 10004, США",
+      "adventureId": "1e33b7bd93b2b"
+    },
+    {
+      "id": "1e33b7bd92222",
+      "name": "statue",
+      "location": "Нью-Йорк, 10004, США",
+      "adventureId": "1e33b7bd93b2b"
     }
   ]
 }

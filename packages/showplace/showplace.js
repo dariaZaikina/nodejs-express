@@ -43,7 +43,7 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
   const showplace = dbShowplace
     .get('showplaces')
-    .find({ adventureId: req.params.id })
+    .filter({ adventureId: req.params.id })
     .value();
 
   res.json({ status: 'OK', data: showplace });
