@@ -30,20 +30,20 @@ router.get('/', (req, res) => {
 });
 
 // GET /showplaces/:id
-router.get('/:id', (req, res) => {
-  const showplace = dbShowplace
-    .get('showplaces')
-    .find({ id: req.params.id })
-    .value();
+// router.get('/:id', (req, res) => {
+//   const showplace = dbShowplace
+//     .get('showplaces')
+//     .find({ id: req.params.id })
+//     .value();
 
-  res.json({ status: 'OK', data: showplace });
-});
+//   res.json({ status: 'OK', data: showplace });
+// });
 
 // GET /showplaces/:adventureId
 router.get('/:id', (req, res) => {
   const showplace = dbShowplace
     .get('showplaces')
-    .find({ adventureId: req.params.adventureId })
+    .find({ adventureId: req.params.id })
     .value();
 
   res.json({ status: 'OK', data: showplace });
