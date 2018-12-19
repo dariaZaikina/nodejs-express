@@ -39,6 +39,17 @@ router.get('/:id', (req, res) => {
   res.json({ status: 'OK', data: showplace });
 });
 
+// GET /showplaces/:adventureId
+router.get('/:id', (req, res) => {
+  const showplace = dbShowplace
+    .get('showplaces')
+    .find({ adventureId: req.params.adventureId })
+    .value();
+
+  res.json({ status: 'OK', data: showplace });
+});
+
+
 // POST /showplaces
 router.post('/', (req, res, next) => {
   // const requestBodySchema = {
